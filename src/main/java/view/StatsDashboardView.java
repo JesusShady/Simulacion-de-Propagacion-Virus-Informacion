@@ -563,7 +563,7 @@ public class StatsDashboardView {
 
         queueChipsContainer = new HBox(4);
         queueChipsContainer.setAlignment(Pos.CENTER_LEFT);
-        queueChipsContainer.setWrapText(true);
+        queueChipsContainer.setAlignment(javafx.geometry.Pos.CENTER_LEFT);
 
         lblQueueEmpty = new Label("Cola vacía");
         lblQueueEmpty.setFont(Font.font("Consolas", 11));
@@ -577,7 +577,8 @@ public class StatsDashboardView {
      * Crea un HBox con wrapping simulado para los chips de la cola BFS.
      */
     private void setWrappingContent(HBox container) {
-        container.setStyle("-fx-wrap-text: true;");
+        // HBox no soporta wrap nativo, simplemente dejamos el container como está
+        container.setAlignment(javafx.geometry.Pos.CENTER_LEFT);
     }
 
     /**

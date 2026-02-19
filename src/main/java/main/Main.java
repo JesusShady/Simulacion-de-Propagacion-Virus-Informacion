@@ -11,7 +11,6 @@ import view.MainView;
 
 public class Main extends Application {
 
-
     //Configuracion de la ventana
     private static final String APP_TITLE = "Simulador de propagacion de virus/informacion";
     private static final double WINDOW_WIDTH = 1280;

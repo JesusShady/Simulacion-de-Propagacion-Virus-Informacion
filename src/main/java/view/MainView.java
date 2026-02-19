@@ -129,6 +129,10 @@ public class MainView {
     //Header bar
     //===============================
 
+    private void buildControlPanel(){
+        controlPanel = new ControlPanelView(model);
+    }
+
     private void buildHeader() {
         headerBar = new HBox(12);
         headerBar.setAlignment(Pos.CENTER_LEFT);

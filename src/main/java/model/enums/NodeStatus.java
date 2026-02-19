@@ -60,8 +60,8 @@ public enum NodeStatus{
 
 private final String displayName;
 private final String description;
-private final color primaryColor;
-private final color borderColor;
+private final Color primaryColor;
+private final Color borderColor;
 private final Color glowColor;
 private final String icon;
 private final int ordinalIndex;
@@ -110,7 +110,7 @@ public RadialGradient toRadialGradient(){
 /*
 retorna el color glow como un string hexadecimal
 */
-public string toHex(){
+public String toHex(){
     return String.format("#%02X%02X%02X",
             (int) (primaryColor.getRed()   * 255),
             (int) (primaryColor.getGreen() * 255),
@@ -139,7 +139,7 @@ public String toGraphStreamCSS(int size) {
             "text-background-mode: rounded-box; " +
             "text-background-color: rgba(0,0,0,180); " +
             "text-padding: 4px;",
-            toHex(), borderToHex(), size, glowToHex()
+            toHex(), borderToHex(), size, getGlowHex()
         );
     }
 
@@ -148,6 +148,14 @@ public String toGraphStreamCSS(int size) {
             (int) (borderColor.getRed()   * 255),
             (int) (borderColor.getGreen() * 255),
             (int) (borderColor.getBlue()  * 255)
+        );
+    }
+
+    public String getGlowHex() {
+        return String.format("#%02X%02X%02X",
+                (int) (glowColor.getRed()   * 255),
+                (int) (glowColor.getGreen() * 255),
+                (int) (glowColor.getBlue()  * 255)
         );
     }
 
@@ -206,7 +214,7 @@ public String toGraphStreamCSS(int size) {
     }
 
     @Override
-    public string toString(){
+    public String toString(){
         return String.format("%s [%s] %s", icon, displayName, description);
     }
 
