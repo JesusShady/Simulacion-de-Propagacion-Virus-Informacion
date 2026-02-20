@@ -569,7 +569,7 @@ public class SimulationController {
      */
     public boolean confirmResimulation() {
         Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
-        alert.setTitle("Re-Simular");
+        alert.setTitle("Simular");
         alert.setHeaderText("¿Ejecutar una nueva simulación?");
 
         SimulationState simState = model.getSimulationState();

@@ -122,7 +122,7 @@ public class GraphStreamIntegration {
 
     // ═══════════════════════════════════════════════════════════════
     //  POSICIONES: GraphStream → GraphModel
-    // ══════════════════════════════════════════════════════════════���
+    // ══════════════════════════════════════════════════════════════
 
     public void applyPositionsToModel(double canvasWidth, double canvasHeight) {
         if (gsGraph == null || !synced) return;
