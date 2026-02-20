@@ -611,7 +611,7 @@ Marca `src/main/java` como **Sources Root** en IntelliJ.
 Tutorial completo paso a paso con
 capturas, diagramas y ejemplos.
 
-**[Abrir Guía →](docs/GUIA_DE_USUARIO.md)**
+**[Abrir Guía →](docs/GUIA_USUARIO.md)**
 
 </td>
 <td align="center" width="50%">
