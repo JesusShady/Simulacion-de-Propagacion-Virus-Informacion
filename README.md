@@ -600,12 +600,30 @@ Marca `src/main/java` como **Sources Root** en IntelliJ.
 
 <br>
 
+## 📚 Documentación
+
+<table>
+<tr>
+<td align="center" width="50%">
+
+### 📖 Guía de Usuario
+
+Tutorial completo paso a paso con
+capturas, diagramas y ejemplos.
+
+**[Abrir Guía →](docs/GUIA_DE_USUARIO.md)**
+
+</td>
+<td align="center" width="50%">
+
+
 ## 📄 Licencia
 
 Este proyecto está bajo la Licencia MIT. Ver [LICENSE](LICENSE) para más detalles.
 
 <br>
 
+</table>
 ---
 
 <div align="center">
