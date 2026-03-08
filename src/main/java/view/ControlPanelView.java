@@ -106,29 +106,27 @@ public class ControlPanelView {
     // ═══════════════════════════════════════════════════════════════
 
     private void buildTransportControls() {
-        btnGoToStart   = createTransportButton("⏮", "Ir al inicio",
-                             MainView.TEXT_SECONDARY);
-        btnStepBack    = createTransportButton("⏪", "Paso anterior",
-                             MainView.TEXT_SECONDARY);
+        btnGoToStart   = createTransportButton("|◀", "Ir al inicio",
+                MainView.TEXT_SECONDARY);
+        btnStepBack    = createTransportButton("◀◀", "Paso anterior",
+                MainView.TEXT_SECONDARY);
         btnPlayPause   = createPlayButton();
-        btnStepForward = createTransportButton("⏩", "Siguiente paso",
-                             MainView.TEXT_SECONDARY);
-        btnGoToEnd     = createTransportButton("⏭", "Ir al final",
-                             MainView.TEXT_SECONDARY);
+        btnStepForward = createTransportButton("▶▶", "Siguiente paso",
+                MainView.TEXT_SECONDARY);
+        btnGoToEnd     = createTransportButton("▶|", "Ir al final",
+                MainView.TEXT_SECONDARY);
 
         btnStartSim = createStartSimButton();
     }
 
-    /**
-     * Crea un botón de transporte (⏮⏪⏩⏭) con estilo dark neón.
-     */
     private Button createTransportButton(String icon, String tooltipText, String color) {
         Button btn = new Button(icon);
         btn.setPrefSize(TRANSPORT_BTN_SIZE, TRANSPORT_BTN_SIZE);
         btn.setMinSize(TRANSPORT_BTN_SIZE, TRANSPORT_BTN_SIZE);
-        btn.setFont(Font.font(ICON_FONT, 14));
+        btn.setFont(Font.font("Consolas", FontWeight.BOLD, 12));
         btn.setTextFill(Color.web(color));
         btn.setCursor(javafx.scene.Cursor.HAND);
+
 
         String baseStyle = String.format(
             "-fx-background-color: %s; " +
@@ -172,7 +170,7 @@ public class ControlPanelView {
         Button btn = new Button("▶");
         btn.setPrefSize(PLAY_BTN_SIZE, PLAY_BTN_SIZE);
         btn.setMinSize(PLAY_BTN_SIZE, PLAY_BTN_SIZE);
-        btn.setFont(Font.font(ICON_FONT, 18));
+        btn.setFont(Font.font("Consolas", FontWeight.BOLD, 18));  // ← Cambiar fuente a Consolas
         btn.setTextFill(Color.web(MainView.ACCENT_GREEN));
         btn.setCursor(javafx.scene.Cursor.HAND);
 
@@ -229,7 +227,7 @@ public class ControlPanelView {
      * Actualiza el ícono del botón Play/Pausa.
      */
     public void updatePlayPauseIcon(boolean isPlaying) {
-        btnPlayPause.setText(isPlaying ? "⏸" : "▶");
+        btnPlayPause.setText(isPlaying ? "||" : "▶");
         applyPlayButtonStyle(btnPlayPause, isPlaying);
     }
 
