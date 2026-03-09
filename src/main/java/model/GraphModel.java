@@ -472,32 +472,6 @@ public GraphModel() {
     // MOTOR BFS — PRE-COMPUTACIÓN COMPLETA
     // ═══════════════════════════════════════════════════════════════
 
-    /**
-     * ┌──────────────────────────────────────────────────────────────┐
-     * │              ALGORITMO BFS DE PROPAGACIÓN                   │
-     * │                                                              │
-     * │  1. Inicializar cola BFS con pacientes cero                 │
-     * │  2. Mientras la cola no esté vacía:                         │
-     * │     a. Sacar nodo de la cola                                │
-     * │     b. Para cada vecino ACTIVO:                             │
-     * │        - Si es SUSCEPTIBLE:                                 │
-     * │          · Tirar dado con tasa de contagio                  │
-     * │          · Si sale infectado → agregar a la cola            │
-     * │        - Si está en CUARENTENA: saltar                      │
-     * │        - Si la arista es CORTAFUEGOS: saltar                │
-     * │     c. tick() a todos los infectados                        │
-     * │     d. Recuperar nodos que cumplieron su tiempo             │
-     * │     e. Guardar snapshot de esta iteración                   │
-     * │  3. Marcar simulación como terminada                        │
-     * └──────────────────────────────────────────────────────────────┘
-     *
-     * PRE-COMPUTA toda la simulación de una vez, guardando cada
-     * iteración como un snapshot. Luego el reproductor simplemente
-     * navega entre snapshots sin recalcular nada.
-     *
-     * @return true si la simulación se pre-computó exitosamente
-     */
-
 
     public boolean precomputeSimulation() {
         // Validaciones
@@ -537,7 +511,7 @@ public GraphModel() {
             if (qNode != null) qNode.quarantine();
         }
 
-        // ── INICIALIZACIÓN: Cola BFS con pacientes cero ─────────��─
+        // ── INICIALIZACIÓN: Cola BFS con pacientes cero ──────────
         Deque<String> bfsQueue = new ArrayDeque<>();
         int iterationCount = 0;
 
