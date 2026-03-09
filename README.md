@@ -87,7 +87,7 @@
 
 ```bash
 # Clonar el repositorio
-git clone https://github.com/AikoCol27/SimulacionPropagacion.git
+git clone https://github.com/JesusShady/SimulacionPropagacion.git
 
 # Entrar al directorio
 cd SimulacionPropagacion
